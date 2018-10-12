@@ -1,0 +1,25 @@
+settings:
+  legacy:
+    force: false
+    interval: 0s
+  resources:
+    outputs: outputs.log
+    logs: logs.log
+    errors: errors.log
+schema:
+- name: getpincode
+  path: ./cmd
+  commands:
+    run:
+      status: true
+    generate:
+        status: false
+  watcher:
+    extensions:
+    - go
+    paths:
+    - ../../
+    ignored_paths:
+    - .git
+    - .realize
+    - vendor

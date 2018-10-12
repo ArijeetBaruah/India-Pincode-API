@@ -1,0 +1,27 @@
+version: '2'
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: toor
+      POSTGRES_USER: local
+      POSTGRES_DB: palomino
+    volumes:
+      - .:/code
+      - ./docker-shared/db/data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - palomino
+  adminer:
+    image: adminer:latest
+    restart: always
+    ports:
+      - 8081:8080
+    networks:
+      - palomino
+
+networks:
+  palomino:
+    driver: bridge
