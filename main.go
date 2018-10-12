@@ -46,7 +46,12 @@ func main() {
 	mux.Get("/", http.HandlerFunc(GetPin))
 	mux.Get("/cron", http.HandlerFunc(GetCronPage))
 
-	if err := http.ListenAndServe(":9998", mux); err != nil {
+	port := os.Getenv("PORT")
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
+
+	if err := http.ListenAndServe(":"+port, mux); err != nil {
 		log.Panic(err)
 	}
 }

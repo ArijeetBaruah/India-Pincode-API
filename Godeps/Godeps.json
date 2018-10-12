@@ -1,0 +1,21 @@
+{
+	"ImportPath": "github.com/Arijeet-webonise/India-Pincode-API",
+	"GoVersion": "go1.10",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "github.com/bamzi/jobrunner",
+			"Rev": "273175f8b6ebabab8a639a4e6260a5c50fbf016a"
+		},
+		{
+			"ImportPath": "github.com/go-zoo/bone",
+			"Comment": "1.2-46-g2270ec2",
+			"Rev": "2270ec2a18cc13fba907d4ae5ad546a21473c0ed"
+		},
+		{
+			"ImportPath": "gopkg.in/robfig/cron.v2",
+			"Comment": "v1-11-gbe2e0b0",
+			"Rev": "be2e0b0deed5a68ffee390b4583a13aff8321535"
+		}
+	]
+}
